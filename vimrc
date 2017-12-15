@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " let Vundle manage Vundle
 
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 Bundle 'The-NERD-tree'
 Bundle 'vim-airline'
@@ -16,7 +16,7 @@ Bundle 'ctags.vim'
 
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
- 
+
 filetype plugin indent on " required!
 
 set encoding=utf8
@@ -44,3 +44,7 @@ map <F8> :%s/\t/    /g<CR>
 
 " Removes trailing spaces
 map <F9> :%s/\s\+$//<CR>
+
+" Highlight extra space/tab
+highlight ExtraWhitespace ctermbg=darkred guibg=#382424
+match ExtraWhitespace /\s\+$\|\t/
